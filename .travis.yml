@@ -1,0 +1,13 @@
+language: ruby
+rvm:
+- 2.1.7
+script:
+- rake travis
+deploy:
+  provider: heroku
+  api_key:
+    secure: 02614940-4a68-4ff9-b737-7ecfc6450f79
+  app: WS15-ReciPea-Repo
+  run:
+    - "rake db:setup"
+    - "rake db:populate"
