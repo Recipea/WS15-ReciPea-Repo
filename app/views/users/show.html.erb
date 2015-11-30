@@ -9,7 +9,8 @@
 		</script>
 		<![endif]-->
 	</head>
-	<body>
+	<body class="body">
+	<div class ="layer">
 		<% provide(:title, @user.username) %>
 		<div class="row">
 			<aside class="col-md-4">
@@ -23,5 +24,6 @@
 			<%= yield %>
 			<%= debug(params) if Rails.env.development? %>
 		</div>
+	</div>
 	</body>
 </html>
