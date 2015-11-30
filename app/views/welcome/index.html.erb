@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-	
    <%provide(:title, 'Recipea') %>
    <%= stylesheet_link_tag 'application', media: 'all','data-turbolinks-track' => true %>
    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -12,18 +11,18 @@
     <![endif]-->
 </head>
 <body class="body">
-  <div class="section logo-section"><img alt="" src="Logo.png">
+  <div class="section logo-section"><img class="logo-img" alt="" src="Logo.png">
   </div>
   <div class="section login-section">
     <div class="span5 login-section"><a href="#" id="login-button" class="button">LOGIN</a><a href="#" id="sign-in" class="link-text">or SIGN IN</a>
     </div>
   </div>
-  <div class="section search-section">
-    <div class="container">
+  <div class="row search-section">
+    <div class="search col-md-6 col-md-offset-3">
       <div class="search-text">Show us your fridge and we'll tell you what to cook</div>
       <div class="form">
         <form id="search-form" name="search-form" data-name="Search Form">
-          <input id="search-input" type="text" placeholder="Type in ingredient ..." name="name" data-name="Name" class="w-input search-input">
+          <input id="search-input" type="text" placeholder="Type in ingredient ..." name="name" data-name="Name" class="search-input">
           <div>
           <input type="submit" value="REZEPTE FINDEN" data-wait="Please wait..." id="search-button" class="button">
           </div>
