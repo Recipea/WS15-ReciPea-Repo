@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
   
-  get 'users/new'
-
   root 'welcome#index'
+  get 'users/new'
   
   resources :ingredients
   resources :categories
