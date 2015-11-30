@@ -1,18 +1,5 @@
 require 'rails_helper'
 
-RSpec.describe "users/new", type: :view do
-  before(:each) do
-    assign(:user, User.new(
-      :username => "MyString"
-    ))
-  end
-
-  it "renders new user form" do
-    render
-
-    assert_select "form[action=?][method=?]", users_path, "post" do
-
-      assert_select "input#user_username[name=?]", "user[username]"
-    end
-  end
+RSpec.describe "users/new.html.erb", type: :view do
+  pending "add some examples to (or delete) #{__FILE__}"
 end
