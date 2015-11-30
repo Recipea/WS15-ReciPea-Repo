@@ -1,39 +1,39 @@
 <!DOCTYPE html>
-<!-- This site was created in Webflow. http://www.webflow.com-->
-<!-- Last Published: Tue Nov 24 2015 13:21:31 GMT+0000 (UTC) -->
-<html data-wf-site="56545aa00a465e3570f2f4df" data-wf-page="56545aa00a465e3570f2f4e0">
+<html>
 <head>
 	
-  <meta charset="utf-8">
-  <title>ReciPea</title>
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="shortcut icon" type="image/x-icon" href="https://daks2k3a4ib2z.cloudfront.net/img/favicon.ico">
-  <link rel="apple-touch-icon" href="https://daks2k3a4ib2z.cloudfront.net/img/webclip.png">
+   <title>Recipea</title>
+   <%= stylesheet_link_tag 'application', media: 'all','data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+    <!--[if lt IE 9]>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
+      </script>
+    <![endif]-->
 </head>
 <body class="body">
-  <div class="w-section logo-section"><img alt="" src="Logo.png">
+  <div class="section logo-section"><img alt="" src="Logo.png">
   </div>
-  
-  <!-- <div class="w-section login-section">
-    <div class="w-container login-container"><a href="#" id="login-button" class="w-button login-button">LOGIN</a><a href="#" id="sign-in" class="link-text">or SIGN IN</a>
+  <div class="section login-section">
+    <div class="span5 login-section"><a href="#" id="login-button" class="button">LOGIN</a><a href="#" id="sign-in" class="link-text">or SIGN IN</a>
     </div>
-  </div> -->
-  
-  <div class="w-section search-section">
-    <div class="w-container">
+  </div>
+  <div class="section search-section">
+    <div class="container">
       <div class="search-text">Show us your fridge and we'll tell you what to cook</div>
-      <div class="w-form">
-        <form id="email-form" name="email-form" data-name="Email Form">
+      <div class="form">
+        <form id="search-form" name="search-form" data-name="Search Form">
           <input id="search-input" type="text" placeholder="Type in ingredient ..." name="name" data-name="Name" class="w-input search-input">
-          <input type="submit" value="Submit" data-wait="Please wait..." class="w-button disable">
+          <div>
+          <input type="submit" value="REZEPTE FINDEN" data-wait="Please wait..." id="search-button" class="button">
+          </div>
         </form>
       </div>
     </div>
   </div>
-  
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  <script type="text/javascript" src="../../assets/javascripts/webflow.js"></script>
-  <!--[if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
+    <div class="container">
+      <%= yield %>
+      <%= debug(params) if Rails.env.development? %>
+   </div>
 </body>
 </html>
