@@ -1,27 +1,49 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Recipea</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-  <%= render 'layouts/shim' %>
-</head>
-<body> 
-  <div class="section logo-section">
-  	<%= link_to image_tag("Logo.png", alt: "Recipea logo"), root_path %>
-  </div>
-  <div class="section login-section">
-    <div class="span5 login-section">
-    	 <%= link_to "LOGIN", login_path , id: "login-button",  class: "button"%>
-    	 <%= link_to "or SIGN UP", signup_path , class: "link-text"%>
-    </div>
-  </div>
-	<div class="container">
-      <% flash.each do |message_type, message| %>
-        <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
-      <% end %>
-      <%= yield %>
-    </div>
-</body>
+	<head>
+		<title>Recipea</title>
+		<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+		<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+		<%= csrf_meta_tags %>
+		<%= render 'layouts/shim' %>
+	</head>
+	<body>
+		<div class="section logo-section">
+			<%= link_to image_tag("Logo.png", alt: "Recipea logo"), root_path %>
+		</div>
+		<div class="section login-section">
+			<div>
+				<ul class ="navi">
+					<% if logged_in? %>
+					<li class="title">
+						<%= link_to "Users", '#' %>
+					</li>
+					<li class="title dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Account<b class="caret"></b> </a>
+						<ul>
+							<li>
+								<%= link_to "Profile", current_user %>
+							</li>
+							<li>
+								<%= link_to "Settings", '#' %>
+							</li>
+						</ul>
+							<li class="divider"></li>
+							<li>
+								<%= link_to "LOGOUT", logout_path, method: "delete", id: "login-button",  class: "button" %>
+							</li>
+							<% else %>
+							<%= link_to "LOGIN", login_path , id: "login-button",  class: "button"%>
+							<% end %>
+						</ul>
+						 <%= link_to "or SIGN UP", signup_path , class: "link-text"%>
+			</div>
+		</div>
+		<div class="container">
+			<% flash.each do |message_type, message| %>
+			<%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
+			<% end %>
+			<%= yield %>
+		</div>
+	</body>
 </html>
