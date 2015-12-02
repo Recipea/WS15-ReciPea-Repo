@@ -23,6 +23,9 @@
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	padding-top: 20px;
+	font-size: 18px;
+	color: #fff;
+	text-shadow: 2px 2px 2px #969696;
 }
 
 /* Error Messages */
@@ -117,3 +120,11 @@ input, textarea, select, .uneditable-input {
 .form-control {
   color:  $state-danger-text;
 }}
+
+
+/* fonts */ 
+
+h1, .h1 {
+	color: #fff;
+	text-shadow: 2px 2px 2px #969696;
+}

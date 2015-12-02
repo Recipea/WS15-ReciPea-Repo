@@ -1,10 +1,9 @@
 <% provide(:title, 'Sign up') %>
 
 <body class="body">
-	<div class="layer">
 		<div class ="row">
-			<div class="col-md-6 col-md-offset-3">
-				<h1>Sign up</h1></br>
+			<div class="signup col-md-6 col-md-offset-3">
+				<h1 class="headline">Sign up</h1></br>
 				<%= form_for(@user) do |f| %>
 				<%= render 'shared/error_messages' %>
 				<%= f.label :username %>
@@ -23,5 +22,4 @@
 				<% end %>
 			</div>
 		</div>
-	</div>
 </body>
