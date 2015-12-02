@@ -5,15 +5,22 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <%= render 'layouts/shim' %>
 </head>
-<body>
-    <div class="container">
+<body> 
+  <div class="section logo-section">
+  	<%= link_to image_tag("Logo.png", alt: "Recipea logo"), root_path %>
+  </div>
+  <div class="section login-section">
+    <div class="span5 login-section"><a href="#" id="login-button" class="button">LOGIN</a>
+    	 <%= link_to "or SIGN UP", signup_path , class: "link-text"%>
+    </div>
+  </div>
+	<div class="container">
       <% flash.each do |message_type, message| %>
-        <div class="alert alert-<%= message_type %>"><%= message %></div>
+        <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
       <% end %>
       <%= yield %>
-      <%= debug(params) if Rails.env.development? %>
     </div>
-
 </body>
 </html>

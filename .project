@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>Ws15-ReciPea-Repo</name>
+	<name>WS15-ReciPea-Repo</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -12,6 +12,10 @@
 		</buildCommand>
 	</buildSpec>
 	<natures>
+<<<<<<< HEAD
 		<nature>com.aptana.projects.webnature</nature>
+=======
+		<nature>com.aptana.ruby.core.rubynature</nature>
+>>>>>>> e9376fbfe7d77d7f9ea486cb7ce2d61472c8c6ed
 	</natures>
 </projectDescription>
