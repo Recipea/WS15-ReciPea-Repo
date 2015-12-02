@@ -34,8 +34,9 @@ gem 'bcrypt', '~> 3.1.7'
 # twitter bootstrap
 # https://github.com/seyhunak/twitter-bootstrap-rails
 # gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
+gem "therubyracer"
+gem "less-rails"
 gem "twitter-bootstrap-rails"
-
 gem 'bootstrap-sass',       '3.2.0.0'
 
 # TZinfoData - needed to install rspec
@@ -68,4 +69,4 @@ group :production do
   gem 'pg'
   #gem 'puma',           '2.11.1'
 end
-ruby "2.2.2"
+ruby "2.1.7"
