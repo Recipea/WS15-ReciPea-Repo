@@ -23,7 +23,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
@@ -35,6 +35,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # https://github.com/seyhunak/twitter-bootstrap-rails
 # gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
 gem "twitter-bootstrap-rails"
+
+gem 'bootstrap-sass',       '3.2.0.0'
 
 # TZinfoData - needed to install rspec
 gem 'tzinfo-data'
@@ -64,5 +66,6 @@ end
 group :production do
   gem 'rails_12factor'
   gem 'pg'
+  #gem 'puma',           '2.11.1'
 end
-ruby "2.1.7"
+ruby "2.2.2"
