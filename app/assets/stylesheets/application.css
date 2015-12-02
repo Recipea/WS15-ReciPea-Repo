@@ -128,3 +128,13 @@ h1, .h1 {
 	color: #fff;
 	text-shadow: 2px 2px 2px #969696;
 }
+
+.signup-text {
+	padding-top: 10px;
+	font-size: 16px;
+}
+
+li, .li {
+	font-size: 14px;
+	list-style-type: none;
+}
