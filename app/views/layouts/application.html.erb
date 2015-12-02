@@ -12,7 +12,8 @@
   	<%= link_to image_tag("Logo.png", alt: "Recipea logo"), root_path %>
   </div>
   <div class="section login-section">
-    <div class="span5 login-section"><a href="#" id="login-button" class="button">LOGIN</a>
+    <div class="span5 login-section">
+    	 <%= link_to "LOGIN", login_path , id: "login-button",  class: "button"%>
     	 <%= link_to "or SIGN UP", signup_path , class: "link-text"%>
     </div>
   </div>

@@ -10,20 +10,15 @@
 		<![endif]-->
 	</head>
 	<body class="body">
-	<div class ="layer">
 		<% provide(:title, @user.username) %>
-		<div class="row">
+		<div class="row layer">
 			<aside class="col-md-4">
 				<section class="user_info">
+					<h1 class="center">PROFILE</h1></br>
 					<h1> <%= gravatar_for @user %>
 					<%= @user.username %> </h1>
 				</section>
 			</aside>
 		</div>
-		<div class="container">
-			<%= yield %>
-			<%= debug(params) if Rails.env.development? %>
-		</div>
-	</div>
 	</body>
 </html>
